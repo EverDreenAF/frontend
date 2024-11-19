@@ -33,9 +33,17 @@ function App() {
             .catch((error) => console.error("Error adding user:", error));
     };
 
+    // Function to log users data to the console
+    const handleDisplayUsersInConsole = () => {
+        console.log("Users in the database:", users);
+    };
+
     return (
         <div className="App">
             <h1>User List</h1>
+
+            {/* Button to display user data in the console */}
+            <button onClick={handleDisplayUsersInConsole}>Display Users in Console</button>
 
             {/* Form to add a new user */}
             <div>
